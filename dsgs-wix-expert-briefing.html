@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSGS — Wix Expert Briefing</title>
+<style>
+  :root {
+    --gold: #DDB85C;
+    --orange: #D97757;
+    --terra: #C17B6B;
+    --sand: #D6C9B0;
+    --cream: #E8DCC8;
+    --teal: #81A1AC;
+    --dark: #2C2C2C;
+    --mid: #5A5A5A;
+    --light: #F7F3EE;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 15px; line-height: 1.65; color: var(--dark); background: var(--light); }
+
+  .header { background: var(--dark); color: white; padding: 48px 60px 40px; border-bottom: 4px solid var(--gold); }
+  .header-eyebrow { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .header h1 { font-family: Georgia, serif; font-size: 34px; font-weight: normal; margin-bottom: 8px; }
+  .header-sub { font-size: 13px; color: #aaa; margin-top: 12px; }
+  .header a { color: var(--gold); }
+
+  .container { max-width: 920px; margin: 0 auto; padding: 0 40px 60px; }
+
+  .intro-band { background: var(--cream); border-left: 4px solid var(--orange); padding: 18px 24px; margin: 36px 0; font-size: 14px; }
+
+  section { margin-bottom: 48px; }
+  .section-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); font-weight: 600; margin-bottom: 4px; }
+  h2 { font-family: Georgia, serif; font-size: 21px; font-weight: normal; color: var(--dark); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--sand); }
+  h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--mid); margin: 20px 0 8px; }
+  p { margin-bottom: 10px; }
+  ul, ol { padding-left: 20px; margin-bottom: 10px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--orange); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-bottom: 14px; }
+  th { background: var(--dark); color: white; padding: 8px 12px; text-align: left; font-size: 11px; letter-spacing: 0.5px; }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--sand); vertical-align: top; }
+  tr:nth-child(even) td { background: #FAF7F3; }
+
+  code { background: #eee; border-radius: 3px; padding: 1px 5px; font-size: 12px; font-family: monospace; color: var(--orange); }
+
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; margin: 1px; }
+  .tag-done { background: #D4EDDA; color: #2d6a4f; }
+  .tag-open { background: #FFF3CD; color: #856404; }
+  .tag-p1 { background: #dbeafe; color: #1e40af; }
+  .tag-p2 { background: #e0e0e0; color: #555; }
+
+  .box { background: white; border: 1px solid var(--sand); border-radius: 4px; padding: 14px 18px; margin-bottom: 12px; font-size: 13.5px; }
+  .box.warn { border-left: 3px solid var(--orange); background: #FFF9F5; }
+  .box.info { border-left: 3px solid var(--teal); background: #F5F9FA; }
+
+  .flow { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 10px 0 16px; }
+  .flow-step { background: white; border: 1px solid var(--sand); border-radius: 4px; padding: 5px 11px; font-size: 12.5px; }
+  .flow-arr { color: var(--gold); font-size: 14px; }
+
+  .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px; }
+  .phase-card { background: white; border: 1px solid var(--sand); border-top: 3px solid var(--gold); border-radius: 4px; padding: 14px; }
+  .phase-card.p2 { border-top-color: var(--teal); }
+  .phase-card.p3 { border-top-color: var(--sand); }
+  .phase-num { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 4px; }
+  .phase-title { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+  .phase-card ul { font-size: 12.5px; color: var(--mid); padding-left: 16px; }
+
+  .page-footer { background: var(--dark); color: #888; padding: 20px 60px; font-size: 12px; margin-top: 0; display: flex; justify-content: space-between; }
+  .page-footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-eyebrow">Projektbriefing · Mai 2026</div>
+  <h1>DO SOMETHING GREAT Society<br>Wix Studio Website-Relaunch</h1>
+  <div class="header-sub">
+    Briefing für Wix Experten &amp; Agenturen · Vertraulich<br>
+    Kontakt: Jan Hosa · <a href="mailto:jan@dosomethinggreat.work">jan@dosomethinggreat.work</a> · +43 664 1352661 ·
+    IST-Site: <a href="https://dosomethinggreat.work" target="_blank">dosomethinggreat.work</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="intro-band">
+    <strong>Was wir suchen:</strong> Einen erfahrenen Wix Studio / Velo-Entwickler oder eine kleine Agentur für spezifische Umsetzungsaufgaben. Wir sind kein klassischer Agentur-Kunde — wir bauen vieles selbst und brauchen einen technischen Partner für die Stellen, wo Wix/Velo-Expertise entscheidend ist. <strong>Kein Full-Service, kein Retainer — Projektzusammenarbeit.</strong>
+  </div>
+
+  <!-- 01 BRAND -->
+  <section>
+    <div class="section-label">01</div>
+    <h2>Über DSGS</h2>
+    <p><strong>DO SOMETHING GREAT Society</strong> ist eine Co-Working Holzwerkstatt in Wien (Kalvarienberggasse 12, 1170 Wien). Wir helfen Menschen, handwerklich tätig zu werden, Ideen zu verwirklichen und weniger Zeit am Computer zu verbringen.</p>
+    <p><strong>Angebot:</strong> Tischlerkurse &amp; Workshops · Werkstatt-Abonnements · Pakete · Teamworkshops für Unternehmen · Gutscheine · Shop</p>
+    <p>
+      <strong>Brandbook v2.0:</strong> <a href="https://janhosa.github.io/dsgs-brandbook/" target="_blank">janhosa.github.io/dsgs-brandbook/</a><br>
+      <strong>Figma Design:</strong> <a href="https://www.figma.com/design/ZVtdMa1h4baMD2za2Da7k6/DSGS-squarespace?node-id=0-1" target="_blank">figma.com — DSGS Squarespace Design</a> (nur lesen)<br>
+      <strong>IST-Website:</strong> <a href="https://dosomethinggreat.work" target="_blank">dosomethinggreat.work</a>
+    </p>
+    <p>
+      <strong>Primärfarben:</strong> Gold <code>#DDB85C</code> · Orange <code>#D97757</code> · Terracotta <code>#C17B6B</code> · Peach <code>#D8A391</code> · Sand <code>#D6C9B0</code> · Cream <code>#E8DCC8</code><br>
+      <strong>Akzentfarben:</strong> Teal <code>#81A1AC</code> · Sage <code>#A7BAA0</code> · Ocean <code>#5B8BA0</code><br>
+      <strong>Fonts:</strong> Playfair Display (H1/H2) · Wix Madefor Text (Body, Labels)
+    </p>
+    <div class="box info">Das Figma-Design ist bereits in Wix Studio importiert. Das Brandbook definiert alle Design-Tokens verbindlich.</div>
+  </section>
+
+  <!-- 02 SEITENSTRUKTUR -->
+  <section>
+    <div class="section-label">02</div>
+    <h2>Seitenstruktur &amp; Navigation</h2>
+
+    <h3>Hauptnavigation</h3>
+    <div class="flow">
+      <div class="flow-step">Tischlerkurse</div><div class="flow-arr">→</div>
+      <div class="flow-step">Werkstatt Abo</div><div class="flow-arr">→</div>
+      <div class="flow-step">Team Workshops</div><div class="flow-arr">→</div>
+      <div class="flow-step">Gutscheine</div><div class="flow-arr">→</div>
+      <div class="flow-step">Über Uns</div><div class="flow-arr">→</div>
+      <div class="flow-step">Kontakt</div>
+    </div>
+    <p><strong>Footer:</strong> Alle Hauptseiten + Shop · Storys · Caritas &amp; Wir · Kurse buchen · Impressum · Datenschutz · AGBs</p>
+
+    <h3>Sitemap</h3>
+    <table>
+      <tr><th>Seite</th><th>Slug</th><th>Typ</th></tr>
+      <tr><td>Homepage</td><td><code>/</code></td><td>Statisch</td></tr>
+      <tr><td>Tischlerkurse Übersicht</td><td><code>/tischlerkurse</code></td><td>Repeater (KursDetails CMS)</td></tr>
+      <tr><td>Kurs-Detailseiten (10+)</td><td><code>/schnupperkurs</code>, <code>/5-wochen-basiskurs</code>, …</td><td>Dynamisch oder Statisch — siehe Abschnitt 04</td></tr>
+      <tr><td>Buchungs-Flow</td><td><code>/tischlerkurse-buchung</code></td><td>Wix Bookings (nativ)</td></tr>
+      <tr><td>Werkstatt Abo</td><td><code>/werkstatt-abo</code></td><td>Statisch + Pricing Plans</td></tr>
+      <tr><td>Team Workshops</td><td><code>/team-workshops</code></td><td>Statisch + direkte Buchung + Anfrage-Formular</td></tr>
+      <tr><td>Gutscheine</td><td><code>/gutscheine</code></td><td>Wix Geschenkgutscheine + Shop</td></tr>
+      <tr><td>Shop</td><td><code>/shop</code></td><td>Wix Store (Merch, Gutscheine, künftig: Maschinen, Öle etc.)</td></tr>
+      <tr><td>Über Uns</td><td><code>/about</code></td><td>Statisch</td></tr>
+      <tr><td>Kontakt</td><td><code>/kontakt</code></td><td>Statisch + Wix Forms</td></tr>
+      <tr><td>Blog / Storys</td><td><code>/storys</code></td><td>Wix Blog</td></tr>
+      <tr><td>Pakete</td><td><code>/pakete</code></td><td>Statisch — nicht in Hauptnavigation; Teaser-Links von /tischlerkurse + /werkstatt-abo</td></tr>
+      <tr><td>Caritas &amp; Wir</td><td><code>/caritas-und-wir</code></td><td>Statisch</td></tr>
+      <tr><td>Members-Bereich</td><td><code>/members</code></td><td>Wix Members Area (9 Unterseiten)</td></tr>
+      <tr><td>Impressum / Datenschutz</td><td><code>/impressum</code>, <code>/datenschutz</code></td><td>Statisch / Legal</td></tr>
+    </table>
+
+    <div class="box info">
+      <strong>Blog-Integration auf allen Seiten:</strong> Auf relevanten Seiten sollen aktuelle Blog-Beiträge eingeblendet werden — z.B. auf der Teamworkshop-Seite die letzten Workshop-Storys, auf der Kurse-Seite aktuelle Kurs-Berichte. Wix Blog-Widget oder CMS-Verknüpfung per Velo erforderlich.
+    </div>
+  </section>
+
+  <!-- 03 PRODUKTE -->
+  <section>
+    <div class="section-label">03</div>
+    <h2>Produktbereiche</h2>
+
+    <h3>Tischlerkurse</h3>
+    <p>10 verschiedene Kurse und Workshops (Schnuppern, Basiskurs, Me &amp; Mini-Me, Wochenend-Intensiv, Bau Möbelstück, Schneidbrett, Restaurierung, Oberfläche, Kids Sommercamp, Kids Geburtstag). Buchung direkt über Wix Bookings Widget auf der jeweiligen Seite.</p>
+    <div class="box warn">
+      <strong>Buchungs-Besonderheiten:</strong> Kurs-Serien (z.B. 5-Wochen-Basiskurs) sollen nicht x-mal einzeln buchbar sein, sondern als Serie mit allen Terminen in einer Übersicht — dann Gesamt-Buchung. Gleiches für andere wiederkehrende Kursreihen. Der Experte soll hier eine saubere Lösung im Wix Bookings-Kontext vorschlagen.
+    </div>
+
+    <h3>Werkstatt-Abo</h3>
+    <p>Monatlicher Werkstattzugang (Smartphone-Schloss, Mo–So 8–21 Uhr, bis zu 16 Buchungen/Monat). Drei Laufzeiten:</p>
+    <table>
+      <tr><th>Modell</th><th>Preis</th><th>Besonderheit</th></tr>
+      <tr><td>Probemonat</td><td>€ 250 / Monat</td><td>Jederzeit kündbar</td></tr>
+      <tr><td>6 Monate</td><td>€ 200 / Monat</td><td>Einschreibgebühr €90 (inkl. Werkstatteinführung)</td></tr>
+      <tr><td>12 Monate</td><td>€ 160 / Monat</td><td>Einschreibgebühr €90 · 2h Coaching/Monat inkludiert</td></tr>
+    </table>
+    <p>Abwicklung über Wix Pricing Plans. Mindestlaufzeit je nach Modell. Automatische monatliche Verlängerung.</p>
+    <h3>Add-On (zu allen Abo-Modellen)</h3>
+    <table>
+      <tr><th>Add-On</th><th>Preis</th><th>Details</th></tr>
+      <tr><td>Material-Storage</td><td>€ 15,– / Monat</td><td>Lagerplatz in der Werkstatt für persönliche Materialien und laufende Projekte</td></tr>
+    </table>
+    <div class="box info"><strong>In Zukunft geplant:</strong> Tages-Buchungen und Halbtages-Buchungen als flexible Alternative zum Monats-Abo — für gelegentliche Nutzer ohne Abo-Verpflichtung. Technische Umsetzung via Wix Bookings oder Pricing Plans noch offen.</div>
+
+    <h3>Pakete <code>/pakete</code></h3>
+    <p>Kombinations-Pakete aus Kursen, Abo-Zugängen und Coaching. Haben eine <strong>eigene Seite <code>/pakete</code></strong> — nicht in der Hauptnavigation, aber über Teaser-Banner von <code>/tischlerkurse</code> und <code>/werkstatt-abo</code> verlinkt. Zielgruppe: Kursteilnehmer die den nächsten Schritt machen wollen + Menschen die eigene Projekte umsetzen und Unterstützung brauchen (bestes aus beiden Welten: Kurse + Werkstatt). Die Seite zeigt Einzelpreise aufaddiert vs. Paketpreis — Ersparnis sofort sichtbar. Buchbar über Wix Store oder Bookings.</p>
+    <table>
+      <tr><th>Paket</th><th>Preis</th><th>Inhalt</th></tr>
+      <tr><td>STARTER-Paket</td><td>ab € 500</td><td>Schnupperkurs + Basiskurs oder Intensiv-WE</td></tr>
+      <tr><td>MAKER-Paket</td><td>ab € 920</td><td>Basiskurs + Bau Möbelstück</td></tr>
+      <tr><td>HERO-Paket 6 Monate</td><td>€ 1.530</td><td>Basiskurs + Modul + 6 Monate Abo</td></tr>
+      <tr><td>HERO-Paket 12 Monate</td><td>€ 1.990</td><td>Basiskurs + Modul + 12 Monate Abo (inkl. 2h/Mo Coaching)</td></tr>
+      <tr><td>Bau dein Möbelstück (Session-Paket)</td><td>€ 580</td><td>1 Monat Werkstattzugang + Coaching, flexibel</td></tr>
+      <tr><td>PROJECT LAUNCH</td><td>€ 990</td><td>3h Planungs-Session + 5h Coaching — kein Abo nötig</td></tr>
+    </table>
+
+    <h3>Coaching-Pakete (Add-ons für Abo-Mitglieder)</h3>
+    <table>
+      <tr><th>Paket</th><th>Preis</th><th>Gültigkeit</th></tr>
+      <tr><td>Einzelstunde</td><td>€ 85</td><td>—</td></tr>
+      <tr><td>3 Stunden</td><td>€ 225</td><td>flexibel aufteilbar</td></tr>
+      <tr><td>5 Stunden</td><td>€ 350</td><td>flexibel aufteilbar</td></tr>
+      <tr><td>10 Stunden</td><td>€ 640</td><td>12 Monate gültig</td></tr>
+    </table>
+
+    <h3>Teamworkshops</h3>
+    <p>Maßgeschneiderte Workshops für Unternehmen und Teams (B2B). Zielgruppe: HR / Event-Planer.</p>
+    <ul>
+      <li>Anfrage über Wix Forms (individuelle Workshops)</li>
+      <li><strong>Wunsch: Direkte Buchbarkeit</strong> — Teamworkshop-Kunden sollen Workshops auch direkt buchen können (ohne manuelle Anfrage). Alternativ: dynamische Angebotserstellung durch Kunden im Konfigurator. Experten-Input gefragt.</li>
+      <li>Wunsch: Angebote idealerweise direkt in Wix erstellen oder über einen konfigurierbaren Anfrageprozess</li>
+    </ul>
+
+    <h3>Gutscheine</h3>
+    <ul>
+      <li><strong>Digital:</strong> Wix Geschenkgutscheine (sofort per E-Mail lieferbar)</li>
+      <li><strong>Gedruckt:</strong> Über Shop kaufbar — <em>Frage an den Experten: Sind gedruckte Gutscheine mit Buchungscode (einlösbar im Checkout) in Wix umsetzbar?</em></li>
+    </ul>
+  </section>
+
+  <!-- 04 ARCHITEKTUR -->
+  <section>
+    <div class="section-label">04</div>
+    <h2>Technische Architektur &amp; Bisheriger Stand</h2>
+
+    <div class="box info">
+      <strong>Entwicklungs-Ansatz:</strong> Wir arbeiten mit Wix Studio + Velo Dev Mode. Das ist unsere aktuelle Basis — wir sind aber offen für Experten-Input, ob und wo andere Ansätze (z.B. komplexere Velo-Backend-Module) besser passen. Wichtig ist eine Lösung, die wir nach dem Projekt selbst pflegen können.
+    </div>
+
+    <h3>Kurs-Detailseiten — offene Architektur-Frage</h3>
+    <div class="box warn">
+      Wir haben statische Seiten gewählt, weil Wix Bookings Widgets auf Dynamic Pages Einschränkungen haben. <strong>Wenn der Experte einen zuverlässigen Weg kennt, Bookings Widgets auf dynamischen CMS-Pages einzubinden, bevorzugen wir dynamisch.</strong> Unabdingbar: Auf jeder Kurs-Detailseite sind die kommenden Termine direkt sichtbar und buchbar. Diese Frage bitte im Angebot adressieren.
+    </div>
+
+    <h3>Bereits gebaut ✅</h3>
+    <table>
+      <tr><th>Komponente</th><th>Status</th><th>Details</th></tr>
+      <tr><td>KursDetails CMS Collection</td><td><span class="tag tag-done">fertig</span></td><td>20+ Felder: title, slug, kursTyp, mainBild, kartenTeaser, preis, dauerLabel, kurstag, badge, treuepunkte, aehnlicheKurse, …</td></tr>
+      <tr><td>KursFAQ CMS Collection</td><td><span class="tag tag-done">fertig</span></td><td>Kursspezifische FAQs mit Referenz zu KursDetails</td></tr>
+      <tr><td>Kursübersicht Repeater</td><td><span class="tag tag-done">fertig</span></td><td>Velo Script — filtert nach <code>kursTyp</code>, befüllt Cards aus KursDetails CMS direkt</td></tr>
+      <tr><td>Wix Bookings Services</td><td><span class="tag tag-done">fertig</span></td><td>Alle aktiven Kurse angelegt, Custom Slugs gesetzt und mit CMS synchronisiert</td></tr>
+      <tr><td>Buchungs-Automations &amp; E-Mail-Texte</td><td><span class="tag tag-done">fertig</span></td><td>Bestätigung, Storno, Erinnerung (1 Tag vor Kurs), Abo-Willkommen, Verlängerungs-Erinnerung</td></tr>
+      <tr><td>AGBs 2026 + Community Standards</td><td><span class="tag tag-done">fertig</span></td><td>Final, rechtlich geprüft</td></tr>
+      <tr><td>Teamworkshop-Formular + Automation</td><td><span class="tag tag-done">fertig</span></td><td>Inkl. Auto-Antwort an Anfragesteller</td></tr>
+      <tr><td>Checkout-Texte &amp; Belegtexte</td><td><span class="tag tag-done">fertig</span></td><td>Für alle Produktbereiche in Notion dokumentiert</td></tr>
+      <tr><td>Figma Design</td><td><span class="tag tag-done">fertig</span></td><td><a href="https://www.figma.com/design/ZVtdMa1h4baMD2za2Da7k6/DSGS-squarespace?node-id=0-1" target="_blank">figma.com — DSGS Design</a> (nur lesen)</td></tr>
+      <tr><td>Brandbook v2.0</td><td><span class="tag tag-done">fertig</span></td><td><a href="https://janhosa.github.io/dsgs-brandbook/" target="_blank">janhosa.github.io/dsgs-brandbook/</a></td></tr>
+      <tr><td>Stripe Zahlungsabwicklung</td><td><span class="tag tag-done">fertig</span></td><td>Mit Wix verbunden und aktiv</td></tr>
+    </table>
+
+    <h3>Noch offen (Phase 1)</h3>
+    <table>
+      <tr><th>Komponente</th><th>Anmerkung</th></tr>
+      <tr><td>Kurs-Detailseiten</td><td>Dynamisch (bevorzugt, wenn Bookings Widget zuverlässig einbindbar) oder statisch — Experten-Entscheidung</td></tr>
+      <tr><td>Homepage-Aufbau</td><td>Hero, Entry Points, Upcoming Kurse, Instagram Feed, Newsletter CTA</td></tr>
+      <tr><td>Werkstatt Abo Seite + Pricing Plans</td><td>3 Laufzeiten konfiguriert, Seite offen</td></tr>
+      <tr><td>Teamworkshop-Seite + direkte Buchung</td><td>Anfrage-Flow steht; direkter Buchungsweg offen</td></tr>
+      <tr><td>Members Area (9 Unterseiten)</td><td>Struktur definiert, Umsetzung offen</td></tr>
+      <tr><td>Blog-Migration (9 Posts aus Squarespace)</td><td>Export/Import + neue Blog-Struktur</td></tr>
+      <tr><td>Shop + Gutscheine</td><td>Wix Store Setup, Merch-Sortiment in Definition</td></tr>
+      <tr><td>Newsletter-Integration</td><td>Signup auf Homepage, E-Mail-Flow</td></tr>
+    </table>
+  </section>
+
+  <!-- 05 WIX APPS -->
+  <section>
+    <div class="section-label">05</div>
+    <h2>Wix Apps &amp; Features</h2>
+    <table>
+      <tr><th>App / Feature</th><th>Verwendung</th></tr>
+      <tr><td>Wix Bookings</td><td>Kurs-Buchung (alle Kurstypen), Werkstatt-Slots für Members, Coaching-Termine</td></tr>
+      <tr><td>Wix Pricing Plans</td><td>Werkstatt-Abonnements (Probemonat / 6 Monate / 12 Monate)</td></tr>
+      <tr><td>Wix Store</td><td>Kurs-Pakete, Gutscheine, Merch · künftig: Maschinen, Öle etc.</td></tr>
+      <tr><td>Wix Geschenkgutscheine</td><td>Digitale Gutscheine sofort per E-Mail</td></tr>
+      <tr><td>Wix Forms</td><td>Teamworkshop-Anfrage, Kontaktformular, Materialanfrage (Members)</td></tr>
+      <tr><td>Wix Members Area</td><td>Login, Members-Profil, Zugang zu Members-only Seiten und Community</td></tr>
+      <tr><td>Wix Blog</td><td>Storys / Werkstatt-Geschichten (<code>/storys</code>) · Integration auf Produktseiten</td></tr>
+      <tr><td>Wix Groups / Forum</td><td>Community Feed im Members-Bereich</td></tr>
+      <tr><td>Wix Video</td><td>Tutorial-Videos im Members-Bereich (Kurs-Add-ons)</td></tr>
+      <tr><td>Wix Email Marketing</td><td>Newsletter-Signup und Kampagnen</td></tr>
+      <tr><td>Wix Treuprogramm</td><td>Loyalitätsprogramm "Späne" (nativer Wix Loyalty App)</td></tr>
+      <tr><td>Wix Google Maps</td><td>Werkstatt-Lage auf Kontaktseite</td></tr>
+      <tr><td>Wix Instagram App</td><td>Instagram Feed auf Homepage</td></tr>
+      <tr><td>Stripe</td><td>Zahlungsabwicklung (bereits verbunden)</td></tr>
+    </table>
+  </section>
+
+  <!-- 06 BUCHUNGS-FLOWS -->
+  <section>
+    <div class="section-label">06</div>
+    <h2>Buchungs-Flows</h2>
+
+    <h3>Tischlerkurse (Einzeltermin)</h3>
+    <div class="flow">
+      <div class="flow-step">Homepage / Tischlerkurse</div><div class="flow-arr">→</div>
+      <div class="flow-step">Kurs-Detailseite</div><div class="flow-arr">→</div>
+      <div class="flow-step">Wix Bookings Widget</div><div class="flow-arr">→</div>
+      <div class="flow-step">Checkout / Bestätigung</div>
+    </div>
+
+    <h3>Tischlerkurse (Serien / Pakete)</h3>
+    <div class="flow">
+      <div class="flow-step">Kurs-Detailseite</div><div class="flow-arr">→</div>
+      <div class="flow-step">Alle Serientermine als Übersicht</div><div class="flow-arr">→</div>
+      <div class="flow-step">Gesamt-Buchung (1 Buchungsvorgang)</div><div class="flow-arr">→</div>
+      <div class="flow-step">Checkout</div>
+    </div>
+    <p style="font-size:13px; color: var(--mid);">Gilt für: 5-Wochen-Basiskurs, Wochenend-Intensiv, Bau Möbelstück, Restaurierung — alle Kursreihen. Technische Umsetzung bitte im Angebot adressieren.</p>
+
+    <h3>Team Workshops</h3>
+    <div class="flow">
+      <div class="flow-step">/team-workshops</div><div class="flow-arr">→</div>
+      <div class="flow-step">Direkte Buchung (buchbare Termine) <em>oder</em> Anfrage-Formular</div><div class="flow-arr">→</div>
+      <div class="flow-step">Bestätigung / Manuelle Bearbeitung DSGS</div>
+    </div>
+
+    <h3>Werkstatt Abo</h3>
+    <div class="flow">
+      <div class="flow-step">/werkstatt-abo</div><div class="flow-arr">→</div>
+      <div class="flow-step">Wix Pricing Plans</div><div class="flow-arr">→</div>
+      <div class="flow-step">Wix Members Login/Signup</div><div class="flow-arr">→</div>
+      <div class="flow-step">Werkstatt-Slots buchen</div>
+    </div>
+  </section>
+
+  <!-- 07 ERWEITERTE FEATURES -->
+  <section>
+    <div class="section-label">07</div>
+    <h2>Weitere Features</h2>
+
+    <h3>Loyalitätsprogramm — "Späne"</h3>
+    <p>Punkte-System für Kursbuchungen. Buchung = Späne im Wert des Kurspreises. Einlösbar für Rabatte. Umsetzung über die <strong>native Wix Treuprogramm-App</strong>. Jede Kurs-Detailseite wird den Späne-Wert der Buchung anzeigen (Feld <code>treuepunkte</code> in KursDetails CMS bereits angelegt).</p>
+
+    <h3>Community &amp; Members Area</h3>
+    <p>9 Unterseiten im Members-Bereich. Wichtig: Es gibt <strong>verschiedene Zugangsebenen</strong>:</p>
+    <ul>
+      <li><strong>Freie Community</strong> — für alle registrierten User (ohne Abo-Pflicht)</li>
+      <li><strong>Bezahlte Community / Members</strong> — nur für aktive Abo-Mitglieder</li>
+      <li><strong>Kurs-Add-ons</strong> — Kursbucher können digitale Kursunterlagen und Videos als Ergänzung dazubuchen und haben temporären Zugang (z.B. für die Kursdauer + 3 Monate)</li>
+    </ul>
+    <table>
+      <tr><th>Unterseite</th><th>Zugang</th></tr>
+      <tr><td>Members Home</td><td>Alle eingeloggte User</td></tr>
+      <tr><td>Werkstatt buchen</td><td><strong>Zwei Flows:</strong> (1) Abo-Mitglieder → Buchung über aktiven Price Plan (inkludiert, keine Zusatzzahlung). (2) Nicht-Abonnenten → Tages- oder Halbtages-Buchung, Bezahlung pro Slot. <em>Bitte im Angebot klären: ein Entry Point oder zwei getrennte Seiten/Flows?</em></td></tr>
+      <tr><td>Meine Buchungen</td><td>Alle eingeloggte User</td></tr>
+      <tr><td>Community Feed</td><td>Freie + bezahlte Ebene (konfigurierbar)</td></tr>
+      <tr><td>Materialanfrage · Downloads</td><td>Abo-Mitglieder</td></tr>
+      <tr><td>Video-Tutorials</td><td>Kurs-Add-on (temporär) oder Abo</td></tr>
+      <tr><td>Tischler-Kontakt · Werkzeug-Tipps</td><td>Abo-Mitglieder</td></tr>
+    </table>
+
+    <h3>Shop</h3>
+    <p>Wix Store unter <code>/shop</code>: Merch, Gutscheine, in Zukunft Maschinen-Empfehlungen, Öle, Werkstatt-Zubehör. Sortiment aktuell in Definition.</p>
+  </section>
+
+  <!-- 08 SEO / CMS -->
+  <section>
+    <div class="section-label">08</div>
+    <h2>SEO &amp; CMS-Architektur</h2>
+    <p><strong>Grundregel:</strong> Alle Slugs bleiben identisch zu Squarespace — kein SEO-Ranking geht verloren. Einzige Ausnahme: ein Redirect für einen alten Squarespace-Tippfehler.</p>
+    <table>
+      <tr><th>CMS Collection</th><th>Zweck</th><th>Schlüsselfelder</th></tr>
+      <tr><td>KursDetails</td><td>Alle Kursinhalte (alle kursTypen)</td><td>slug, kursTyp, aktiv, mainBild, preis, badge, treuepunkte, aehnlicheKurse</td></tr>
+      <tr><td>KursFAQ</td><td>Kursspezifische FAQs</td><td>frage, antwort, kursRef (→ KursDetails), reihenfolge</td></tr>
+    </table>
+    <p>Wix Bookings Services: Custom Slugs — identisch mit KursDetails-Slugs, synchronisiert.<br>
+    Blog: <code>/storys</code> (aus Squarespace SEO-konsistent übernommen). 9 Posts aus Squarespace migrieren.<br>
+    Redirect: <code>/datenschutzerklrung</code> → <code>/datenschutz</code> (301).</p>
+  </section>
+
+  <!-- 09 PHASEN -->
+  <section>
+    <div class="section-label">09</div>
+    <h2>Phasen &amp; Zeitplan</h2>
+
+    <div class="phases">
+      <div class="phase-card">
+        <div class="phase-num">Phase 1 — Launch</div>
+        <div class="phase-title">Core Website</div>
+        <ul>
+          <li>Homepage</li>
+          <li>Kursübersicht + Kurs-Detailseiten</li>
+          <li>Werkstatt Abo + Pricing Plans</li>
+          <li>Team Workshops</li>
+          <li>Gutscheine + Shop</li>
+          <li>Pakete (<code>/pakete</code>)</li>
+          <li>Über Uns · Kontakt · Legal</li>
+          <li>Blog / Storys + Migration</li>
+          <li>Newsletter-Integration</li>
+          <li>Redirects + SEO-Setup</li>
+          <li>Responsive — alle Breakpoints</li>
+        </ul>
+      </div>
+      <div class="phase-card p2">
+        <div class="phase-num">Phase 2 — nach Angebot</div>
+        <div class="phase-title">Members &amp; Advanced</div>
+        <ul>
+          <li>Members Area (9 Seiten)</li>
+          <li>Community / Gruppen-Zugangsebenen</li>
+          <li>Kurs-Add-ons (Video-Zugang)</li>
+          <li>Loyalitätsprogramm Späne</li>
+          <li>Direktbuchung Teamworkshops</li>
+        </ul>
+      </div>
+      <div class="phase-card p3">
+        <div class="phase-num">Phase 3 — Zukunft</div>
+        <div class="phase-title">Erweiterung</div>
+        <ul>
+          <li>Shop-Erweiterung</li>
+          <li>Performance-Optimierung</li>
+          <li>Analytics &amp; Conversion-Tracking</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box warn">
+      <strong>Timing-Erwartung:</strong> Relaunch-Ziel ist so bald wie möglich nach Fertigstellung von Phase 1. Wir sind ein kleines Team und arbeiten aktiv mit — kein langer Produktionszyklus. Wir bevorzugen iterative Umsetzung mit schnellen Zwischenergebnissen.
+    </div>
+  </section>
+
+  <!-- 10 WER MACHT WAS -->
+  <section>
+    <div class="section-label">10</div>
+    <h2>Was wir selbst machen — Was wir brauchen</h2>
+    <table>
+      <tr><th>Wir machen selbst</th><th>Partner-Leistung gesucht</th></tr>
+      <tr>
+        <td>
+          <ul>
+            <li>Content-Pflege (Texte, Bilder, CMS-Einträge)</li>
+            <li>Design-Anpassungen im Studio-Editor</li>
+            <li>Neue Kurse anlegen (CMS + Bookings)</li>
+            <li>E-Mail Automation-Texte</li>
+            <li>SEO-Texte und -Optimierung</li>
+            <li>Booking-Konfiguration (Pricing Plans, Automations)</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Kurs-Detailseiten: Architektur-Entscheidung (dynamisch vs. statisch) + Umsetzung Template</li>
+            <li>Serienbuchung / Package-Booking-Logik in Wix Bookings</li>
+            <li>Komplexe Velo-Scripts</li>
+            <li>Members Area Architektur &amp; Umsetzung (Zugangsstufen)</li>
+            <li>Teamworkshop-Direktbuchung</li>
+            <li>Wix Groups / Forum Setup</li>
+            <li>Performance &amp; technische SEO</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <div class="box warn">
+      <strong>Responsive ist Pflicht ab Tag 1.</strong> Die gesamte Website muss von Beginn an auf allen Breakpoints (Mobile, Tablet, Desktop) sauber funktionieren und aussehen — kein nachträgliches Responsive-Fixen. Bitte im Angebot adressieren wie das sichergestellt wird.
+    </div>
+  </section>
+
+</div>
+
+<div class="page-footer">
+  <div>DO SOMETHING GREAT Society GmbH · Wien · <a href="https://dosomethinggreat.work">dosomethinggreat.work</a></div>
+  <div>Briefing Stand: Mai 2026 · Vertraulich</div>
+</div>
+
+</body>
+</html>
